@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End</title>
+</head>
+<body>
+    <div style="display: inline-block; border: 1px #CCCCCC solid; padding: 10px;">
+        <form action="javascript:void(0);" id="form_cadastrar_cliente" method="post">
+            <input type="hidden" name="_method" id="metodo" value="POST" data-required>
+            <input type="hidden" name="cod_cliente" id="inputCodCliente" value="0" data-required>
+
+            <table>
+                <tr>
+                    <td colspan="2" style="text-align: center; background-color: #CCC; padding: 10px;">Formulário por Campos</td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Nome: </td>
+                    <td><input type="text" name="nome" id="inputNome" data-required></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Endereço: </td>
+                    <td><input type="text" name="endereco" id="inputEndereco" data-required></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Endereço Nº: </td>
+                    <td><input type="number" name="endereco_numero" id="inputEnderecoNumero" data-required></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Telefone: </td>
+                    <td><input type="text" name="telefone" id="inputTelefone" data-required></td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Crédito: </td>
+                    <td><input type="number" name="credito" id="inputCredito" data-required></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><button type="submit" id="botao_cadastrar_cliente" data-loading-text="Aguarde...">Cadastrar</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <br><br>
+    <table cellpadding="5" cellspacing="5" style="border: 1px #CCCCCC solid;">
+        <thead>
+            <tr>
+                <td>Nome</td>
+                <td>Endereço</td>
+                <td>Endereço Numero</td>
+                <td>Telefone</td>
+                <td>Crédito</td>
+                <td>Ação</td>
+            </tr>
+        </thead>
+        <tbody class="lista_clientes"></tbody>
+    </table>
+
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery-validate.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/script.js?v=1" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
